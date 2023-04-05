@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const Heading = () => {
+export const Heading = ({ title }) => {
   return (
-    <div>Heading</div>
+    <>
+      <h2 className='heading' data-aos='zoom-in-down'>
+        {title}
+      </h2>
+    </>
   )
 }
