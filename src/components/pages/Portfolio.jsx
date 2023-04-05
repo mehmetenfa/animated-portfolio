@@ -11,23 +11,24 @@ export const Portfolio = () => {
 
   const filterItems = (category) => {
     const newItems = portfolio.filter((item) => item.category === category);
-    setCategory(newItems);
+    setLists(newItems);
     if (category === "all") {
       setLists(portfolio);
       return;
     }
   };
+
   return (
     <>
       <article>
         <div className="container">
           <Heading title="Portfolio" />
-          <div className="carButton">
+          <div className="catButton">
             {category.map((category) => (
               <button
                 className="primaryBtn"
                 onClick={() => filterItems(category)}
-                data-aos="zoom-out-zoom"
+                data-aos="zoom-out-down"
               >
                 {category}
               </button>
